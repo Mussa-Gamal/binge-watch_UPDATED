@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Binge Watch.</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- CDN fonts Neue haas grotesk & Inconsolata -->
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">  
+    <link href="https://fonts.cdnfonts.com/css/inconsolata-2" rel="stylesheet"> 
+     
+    <!-- CSS -->
+    <link rel="stylesheet" href="libraries/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!---------- Navbar ---------->
+    <nav class="navbar navbar-expand-lg mt-0 py-2 fixed-top" id="navbar">
+      <div class="container-fluid px-lg-3 px-0" data-aos="fade-down">
+        <a class="logo navbar-brand ms-md-4 ms-3 me-xl-5 me-lg-3 me-0 mb-1" href="#"><svg data-v-6805eed4="" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="35 95 270 60" preserveAspectRatio="xMidYMid meet" color-interpolation-filters="sRGB" style="margin: auto;"> <rect data-v-6805eed4="" x="0" y="0" width="100%" height="100%" fill="#000000" fill-opacity="0" class="background"></rect> <!----> <g data-v-6805eed4="" fill="#03E9F4" class="linesvg" transform="translate(38.3699951171875,98.67000007629395)"><polyline stroke="#03E9F4" stroke-width="3" fill-opacity="0" points="0,14.329999923706055 0,0 14.329999923706055,0"></polyline> <polyline stroke="#03E9F4" stroke-width="3" fill-opacity="0" points="248.93000984191895,52.65999984741211 263.260009765625,52.65999984741211 263.260009765625,38.329999923706055"></polyline> <g fill="#03E9F4" transform="translate(12,12)"><g data-gra="path-name" fill-rule="" class="tp-name"><g transform="scale(1)"><g><path d="M4.74-13.23C8.09-13.23 10.96-13.23 14.31-13.23 18.05-13.23 22-11.68 22.04-7.33 22.04-2.91 17.54-2.07 14.03-2.07L4.74-2.07ZM4.74-26.06L14.03-26.06C17.5-26.06 21.16-24.35 21.16-20.29 21.16-16.3 17.66-15.26 14.31-15.26L4.74-15.26ZM14.03-27.9C9.96-27.9 6.62-27.9 2.59-27.9L2.59 0C6.66 0 9.96 0 14.03 0 18.81 0 24.15-1.55 24.15-7.29 24.15-10.52 22.16-13.35 18.65-14.31 21.44-15.18 23.2-17.42 23.2-20.29 23.2-25.59 18.73-27.9 14.03-27.9ZM31.45 0L31.45-27.9 29.33-27.9 29.33 0ZM37.62-27.9L37.62 0 39.77 0 39.77-23.04 58.59 0 59.42 0 59.42-27.9 57.31-27.9 57.31-4.82 38.54-27.9ZM88.84-24.11C86.01-26.9 82.3-28.3 78.63-28.3 70.14-28.3 64.21-22.6 64.25-13.87 64.25-6.26 69.15 0.36 78.63 0.36 82.78 0.36 86.25-1.24 89.15-4.14L89.15-14.59 77.4-14.59 77.4-12.71 87.12-12.71 87.12-4.9C84.73-2.71 81.62-1.67 78.63-1.67 70.5-1.67 66.32-7.33 66.32-13.91 66.28-20.37 70.46-26.34 78.63-26.34 81.78-26.34 85.17-25.15 87.6-22.76ZM97.09-25.87L114.22-25.87 114.22-27.9 94.97-27.9 94.97 0 114.7 0 114.7-2.07 97.09-2.07 97.09-13.07 113.43-13.07 113.43-15.03 97.09-15.03Z" transform="translate(-2.5900001525878906, 28.299999237060547)"></path></g> <!----> <!----> <!----> <!----> <!----> <!----> <g data-gra="path-name-1" fill="#FFFFFF" transform="translate(115.11000061035156,0)"><g transform="scale(1)"><path d="M11.2-2.39L2.59-27.9 0.32-27.9 10.08 0.08 12.39 0.08 16.86-13.07 20.37-24.03 23.87-12.99 28.3 0.08 30.61 0.08 40.45-27.9 38.14-27.9 29.49-2.39 20.96-27.9 19.77-27.9ZM57.51-19.69L57.51-15.38C55.88-18.45 52.65-19.93 49.46-19.93 43.96-19.93 39.46-15.86 39.46-9.84 39.46-3.83 43.96 0.32 49.46 0.32 52.65 0.32 55.6-1.12 57.51-4.18L57.51 0 59.46 0C59.46-6.58 59.46-13.11 59.46-19.69ZM49.46-18.05C60.42-18.05 60.42-1.59 49.46-1.59 45-1.59 41.41-4.9 41.41-9.84 41.41-14.79 45-18.05 49.46-18.05ZM66.52-25.43L66.52-19.69 62.33-19.69 62.33-18.05 66.52-18.05 66.52-6.06C66.52-2.19 67.87 0.28 72.06 0.28 73.29 0.28 74.53-0.12 75.76-0.72L75.09-2.31C74.09-1.83 73.01-1.51 72.06-1.51 68.99-1.51 68.43-3.39 68.43-6.06L68.43-18.05 75.13-18.05 75.13-19.69 68.43-19.69 68.43-25.63ZM94.46-4.07C92.86-2.47 90.71-1.63 88.6-1.63 84.13-1.63 80.39-4.54 80.39-9.84 80.39-15.14 84.13-18.05 88.6-18.05 90.71-18.05 92.9-17.3 94.49-15.7L95.77-16.94C93.78-18.89 91.19-19.89 88.6-19.89 82.9-19.89 78.47-16.06 78.47-9.84 78.47-3.63 83.06 0.2 88.6 0.2 91.19 0.2 93.78-0.76 95.77-2.75ZM99.76-27.9L99.76 0 101.71 0 101.71-10.8C101.71-14.91 104.58-18.09 108.72-18.09 113.15-18.09 115.06-15.34 115.06-11.28L115.06 0 116.97 0 116.97-11.28C116.97-16.42 114.22-19.97 108.72-19.97 105.97-19.93 103.22-18.85 101.63-16.02L101.63-27.9ZM121.32-1.2C121.32 0.88 124.47 0.88 124.47-1.2 124.47-3.27 121.32-3.27 121.32-1.2Z" transform="translate(-0.320000022649765, 28.299999237060547)"></path></g></g></g></g> <!----></g></g><defs v-gra="od"></defs></svg></a>
+
+      <div class="d-flex align-items-center order-lg-1 ms-auto ms-5 pe-sm-2 pe-0">
+        <div class="theme-toggle" id="theme-toggle">
+          <i class="theme-icon fa-solid fa-sun" id="sun-icon"></i>
+          <i class="theme-icon fa-solid fa-moon" id="moon-icon" style="display: none;"></i>
+        </div>
+        <button class="sign-up navbar-expand ms-auto">Sign Up</button>
+      </div>
+
+        <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar_toggler" onclick="disableScroll()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="first-li nav-item p-0 mt-lg-0 mt-2">
+              <a class="item-1 nav-link ps-lg-0 ps-3 py-3" href="#">Home</a>
+            </li>
+            <li class="nav-item p-0">
+              <a class="item-2 nav-link ps-lg-0 ps-3 py-3" href="#">Movies</a>
+            </li>
+            <li class="nav-item p-0">
+              <a class="item-3 nav-link ps-lg-0 ps-3 py-3" href="#">TV Series</a>
+            </li>
+            <li class="nav-item p-0">
+              <a class="item-4 nav-link ps-lg-0 ps-3 py-3" href="#">Most Popular</a>
+            </li>
+            <li class="last-li nav-item p-0">
+              <a class="item-5 nav-link ps-lg-0 ps-3 py-3" href="#">Top Airing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="space"></div>
+
+    <section class="app" id="all">
+
+      <!---------- Hero 1 ---------->
+      <section class="hero-1 container-fluid" data-aos="zoom-out">
+        <div class="row">
+          <div class="bg-image col-lg-7 col-md-6 col-12 px-0" id="iconBg">
+            <img src="heros-images/main-background-dark.png" alt="" class="dark-bg" id="dark-bg">
+            <img src="heros-images/main-background-light.png" alt="" class="light-bg" id="light-bg" style="display: none;">
+          </div>
+  
+          <div class="details col d-flex flex-column justify-content-center mx-xl-5 mx-2 pt-lg-3 pt-4">
+            <h1>Watch the <span class="turquoise-highlight">anime</span> you love.. With the best <span class="turquoise-highlight">quality</span>.</h1>
+  
+            <p class="my-4">With over 5000+ Anime shows and the diversity of generes available, shows that carry heavy themes, ranging from lighthearted to more mature, making them relatable to all audiences.</p>
+  
+            <a href="#" class="a-dig-in-btn mx-auto"><button class="dig-in-btn">Dig in</button></a>
+          </div>
+        </div>
+      </section>
+      
+      <!---------- Hero 2 (Slider) ---------->
+      <section class="hero-2">
+        <div class="headings">
+          <h1 data-aos="fade-left">We've got the <span class="turquoise-highlight">generes</span> suitable for you.</h1>
+  
+          <div class="last-heading" data-aos="fade-right">
+            <h1>I want to watch <br class="br-auto-typing navbar-nav"><span class="auto-typing"></span></h1>
+          </div>
+        </div>
+
+        <div class="slider" data-aos="fade-up" data-aos-delay="800">
+          <div class="slider-container" id="slider-container">
+            <div class="slidez slide-1">
+              <img src="slider-images/aot-poster.jpg" alt="">
+              <div class="image-overlay">
+                <div class="image-title">Shingeki no Kyojin</div>
+                <p class="image-desc">Rated from the top Action animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-2">
+              <img src="slider-images/ditf-poster.png" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title" style="text-align: left; width: 100%; padding-left: 20px;">DARLING in the <br> FRANXX</div>
+                <p class="image-desc">Rated from the top Romance animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-3">
+              <img src="slider-images/hxh-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Hunter x Hunter</div>
+                <p class="image-desc">Rated from the top Adventure animes. </p>
+              </div>  
+            </div>
+            <div class="slidez slide-4">
+              <img src="slider-images/opm-poster.jpeg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">One punch Man</div>
+                <p class="image-desc">Rated from the top Comedy animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-5">
+              <img src="slider-images/ve-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Violet Evergarden</div>
+                <p class="image-desc">Rated from the top Drama animes. </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="slider-container" id="slider-container">
+            <div class="slidez slide-1">
+              <img src="slider-images/aot-poster.jpg" alt="">
+              <div class="image-overlay">
+                <div class="image-title">Shingeki no Kyojin</div>
+                <p class="image-desc">Rated from the top Action animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-2">
+              <img src="slider-images/ditf-poster.png" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title" style="text-align: left; width: 100%; padding-left: 20px;">DARLING in the <br> FRANXX</div>
+                <p class="image-desc">Rated from the top Romance animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-3">
+              <img src="slider-images/hxh-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Hunter x Hunter</div>
+                <p class="image-desc">Rated from the top Adventure animes. </p>
+              </div>  
+            </div>
+            <div class="slidez slide-4">
+              <img src="slider-images/opm-poster.jpeg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">One punch Man</div>
+                <p class="image-desc">Rated from the top Comedy animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-5">
+              <img src="slider-images/ve-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Violet Evergarden</div>
+                <p class="image-desc">Rated from the top Drama animes. </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="slider-container" id="slider-container">
+            <div class="slidez slide-1">
+              <img src="slider-images/aot-poster.jpg" alt="">
+              <div class="image-overlay">
+                <div class="image-title">Shingeki no Kyojin</div>
+                <p class="image-desc">Rated from the top Action animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-2">
+              <img src="slider-images/ditf-poster.png" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title" style="text-align: left; width: 100%; padding-left: 20px;">DARLING in the <br> FRANXX</div>
+                <p class="image-desc">Rated from the top Romance animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-3">
+              <img src="slider-images/hxh-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Hunter x Hunter</div>
+                <p class="image-desc">Rated from the top Adventure animes. </p>
+              </div>  
+            </div>
+            <div class="slidez slide-4">
+              <img src="slider-images/opm-poster.jpeg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">One punch Man</div>
+                <p class="image-desc">Rated from the top Comedy animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-5">
+              <img src="slider-images/ve-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Violet Evergarden</div>
+                <p class="image-desc">Rated from the top Drama animes. </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="slider-container" id="slider-container">
+            <div class="slidez slide-1">
+              <img src="slider-images/aot-poster.jpg" alt="">
+              <div class="image-overlay">
+                <div class="image-title">Shingeki no Kyojin</div>
+                <p class="image-desc">Rated from the top Action animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-2">
+              <img src="slider-images/ditf-poster.png" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title" style="text-align: left; width: 100%; padding-left: 20px;">DARLING in the <br> FRANXX</div>
+                <p class="image-desc">Rated from the top Romance animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-3">
+              <img src="slider-images/hxh-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Hunter x Hunter</div>
+                <p class="image-desc">Rated from the top Adventure animes. </p>
+              </div>  
+            </div>
+            <div class="slidez slide-4">
+              <img src="slider-images/opm-poster.jpeg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">One punch Man</div>
+                <p class="image-desc">Rated from the top Comedy animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-5">
+              <img src="slider-images/ve-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Violet Evergarden</div>
+                <p class="image-desc">Rated from the top Drama animes. </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="slider-container" id="slider-container">
+            <div class="slidez slide-1">
+              <img src="slider-images/aot-poster.jpg" alt="">
+              <div class="image-overlay">
+                <div class="image-title">Shingeki no Kyojin</div>
+                <p class="image-desc">Rated from the top Action animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-2">
+              <img src="slider-images/ditf-poster.png" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title" style="text-align: left; width: 100%; padding-left: 20px;">DARLING in the <br> FRANXX</div>
+                <p class="image-desc">Rated from the top Romance animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-3">
+              <img src="slider-images/hxh-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Hunter x Hunter</div>
+                <p class="image-desc">Rated from the top Adventure animes. </p>
+              </div>  
+            </div>
+            <div class="slidez slide-4">
+              <img src="slider-images/opm-poster.jpeg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">One punch Man</div>
+                <p class="image-desc">Rated from the top Comedy animes. </p>
+              </div>
+            </div>
+            <div class="slidez slide-5">
+              <img src="slider-images/ve-poster.jpg" alt="" class="image">
+              <div class="image-overlay">
+                <div class="image-title">Violet Evergarden</div>
+                <p class="image-desc">Rated from the top Drama animes. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Hero 3 ---------->
+      <section class="hero-3 container-fluid">
+        <div class="row">
+          <div class="details col-md col-12 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-right" data-aos-delay="450">Watch anywhere, anytime.</h1>
+            <p data-aos="fade-right" data-aos-delay="600">Experience limitless anime streaming at Binge Watch. Enjoy your favorite shows and movies on your laptop, TV, PS4, and more. Dive into captivating stories wherever you are.</p>
+          </div>
+          <div class="image col d-flex flex-column justify-content-center" data-aos="fade-left" data-aos-delay="200">
+            <img src="heros-images/dazai.jpg" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!---------- Hero 4 ---------->
+      <section class="hero-4 container-fluid">
+        <div class="row d-flex flex-md-row flex-column-reverse">
+          <div class="image col d-flex flex-column justify-content-center" data-aos="fade-right" data-aos-delay="200">
+            <img src="heros-images/demon-slayer.png " alt="">
+          </div>
+          <div class="details col-md col-12 col d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-left" data-aos-delay="450">Ride the latest Anime wave.</h1>
+            <p data-aos="fade-left" data-aos-delay="600">Catch episodes just moments after they air in Japan, and dive into a world of captivating stories, stunning animation, and thrilling adventures.</p>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Hero 5 ---------->
+      <section class="hero-5 container-fluid">
+        <div class="row">
+          <div class="details col-md col-12 col d-flex flex-column justify-content-center" data-aos="fade-right">
+            <h1 data-aos="fade-right" data-aos-delay="450">Dive into offline Adventures.</h1>
+            <p data-aos="fade-right" data-aos-delay="600">Wanna stream offline? Download episodes and explore your favorite series offline, anytime, anywhere. Your adventure awaits, without limits.</p>
+          </div>
+          <div class="image col d-flex flex-column justify-content-center" data-aos="fade-left" data-aos-delay="200">
+            <img src="heros-images/mikey.jpg" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!---------- Form ---------->
+      <section class="form container-fluid ps-0">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="image col" id="form-image"></div>
+  
+          <form action="https://formspree.io/f/xeqbgrak" method="POST" class="input-details col-md-6 col-12" id="form" data-aos="fade" data-aos-delay="700">
+            <h1>Dig in now and watch endless of the best anime shows.</h1>
+            <div class="position-relative">
+              <input type="text" class="form-control f-name my-0" name="First name" id="f-name" required="required" onkeyup="validateFName()" maxlength="20">
+              <span class="effect">First name</span>
+              <p class="error-message mb-0" id="f-name_error"></p>
+            </div>
+
+            <div class="position-relative">
+              <input type="text" class="form-control s-name my-0" name="Family name" id="s-name" required="required" onkeyup="validateSName()" maxlength="20">
+              <span class="effect">Family name</span>
+              <p class="error-message mb-0" id="s-name_error"></p>
+            </div>
+
+            <div class="position-relative">
+              <input type="email" class="form-control email my-0" name="E-mail" id="email" required="required" onkeyup="validateEmail()" maxlength="100">
+              <span class="effect">E-mail address</span>
+              <p class="error-message mb-0" id="email_error"></p>
+            </div>
+
+            <div class="position-relative">
+              <textarea type="phone" class="form-control message my-0" name="Message" id="message" required="required" onkeyup="validateMessage()" maxlength="500"></textarea>
+              <span class="effect">Write a message!</span>
+              <p class="error-message mb-0" id="message_error"></p>
+            </div>
+            <div class="position-relative">
+              <input type="submit" class="form-control submit-btn mt-0" name="submit" id="submit-btn" value="Dig in" onclick="return validateForm()">
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!---------- Footer ---------->
+      <footer>
+        <div class="footer-box container" data-aos="zoom-out-up" data-aos-delay="400">
+          <div class="footer-box-child row px-3">
+            <div class="get-in-touch footer-items col-md col-12 d-md-block d-flex">
+              <h2 class="">GET IN TOUCH</h2>
+              <div class="list mx-auto">
+                <p><a href="#">E-mail</a></p>
+                <p><a href="#">Contact us</a></p>
+              </div>
+            </div>
+  
+            <div class="pricing footer-items col-md col-12 d-md-block d-flex">
+              <h2>PRICING</h2>
+              <div class="list mx-auto">
+                <p><a href="#">Overview</a></p>
+                <p><a href="#">Premium Plans</a></p>
+                <p><a href="#">Affiliate Program</a></p>
+                <p><a href="#">Promotions</a></p>
+              </div>
+            </div>
+  
+            <div class="company footer-items col-md col-12 d-md-block d-flex">
+              <h2>COMPANY</h2>
+              <div class="list mx-auto">
+                <p><a href="#">About us</a></p>
+                <p><a href="#">Blog</a></p>
+                <p><a href="#">Partnerships</a></p>
+                <p><a href="#">Careers</a></p>
+              </div>
+            </div>
+  
+            <div class="service footer-items col-md col-12 d-md-block d-flex">
+              <h2>SERVICES</h2>
+              <div class="list mx-auto">
+                <p><a href="#">Feedback</a></p>
+                <p><a href="#">Compare</a></p>
+                <p><a href="#">Download</a></p>
+                <p><a href="#">Bug Report</a></p>
+              </div>
+            </div>   
+          </div>
+  
+          <div class="links">
+            <h2>&copy; Binge Watch</h2>
+            <div class="icons">
+              <p><a href="#"><i class="fa-brands fa-facebook"></i></a></p>
+              <p><a href="#"><i class="fa-brands fa-instagram"></i></a></p>
+              <p><a href="https://www.linkedin.com/in/mussa-gamal/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></p>
+              <p><a href="https://github.com/Mussa-Gamal" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+            </div>
+          </div>
+          
+        </div>
+      </footer>
+    </section>
+
+    
+    <div id="blob"></div>
+  
+    
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="libraries/typed.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="libraries/Bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
