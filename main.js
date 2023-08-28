@@ -236,3 +236,10 @@ document.body.onpointermove = event => {
         top: `${clientY}px`
     }, {duration: 3000, fill: "forwards" });
 }
+
+
+var loader = document.getElementById("loader");
+
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+})
